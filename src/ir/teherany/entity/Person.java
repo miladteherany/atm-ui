@@ -10,6 +10,13 @@ public class Person implements Serializable {
     private String nationalCode;
     private Integer deletedDate;
 
+    public Person(String firstName, String lastName, Integer age, String nationalCode) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.nationalCode = nationalCode;
+    }
+
     public Long getId() {
         return id;
     }
