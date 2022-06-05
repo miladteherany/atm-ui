@@ -16,7 +16,7 @@ public class PersonDA implements AutoCloseable {
 
     public void insert(Person person) {
         long dbId = 0;
-        String SQL = "INSERT INTO PERSON WHERE (FIRSTNAME, LASTNAME, AGE, NATIONALCODE) VALUES (?,?,?,?)";
+        String SQL = "INSERT INTO PERSON (FIRSTNAME, LASTNAME, AGE, NATIONALCODE) VALUES (?,?,?,?)";
         try {
             preparedStatement = connection.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, person.getFirstName());
