@@ -19,4 +19,11 @@ public class AccountServiceImpl implements AccountService {
             accountDA.insert(account);
         }
     }
+
+    @Override
+    public void findOne(int id) throws Exception {
+        try (AccountDA accountDA = new AccountDA()){
+            accountDA.selectOne(id);
+        }
+    }
 }

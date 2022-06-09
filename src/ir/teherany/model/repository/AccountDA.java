@@ -42,10 +42,15 @@ public class AccountDA implements AutoCloseable {
         }
     }
 
+    public void selectOne(int id) {
+
+    }
 
     @Override
     public void close() throws Exception {
         preparedStatement.close();
         connection.close();
     }
+
+
 }
