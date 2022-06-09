@@ -72,3 +72,20 @@ CREATE TABLE withdraw
 
 );
 
+INSERT INTO accountType (type, value) values ('Current', 1);
+INSERT INTO accountType (type, value) values ('Savings', 2);
+INSERT INTO accountType (type, value) values ('Salary', 3);
+
+SELECT * FROM accountType;
+
+INSERT INTO transactionType (type, value) VALUES ('Transfer', 0);
+INSERT INTO transactionType (type, value) VALUES ('Deposit', 1);
+INSERT INTO transactionType (type, value) VALUES ('Withdraw', -1);
+
+SELECT * FROM transactionType;
+
+INSERT INTO transactionStatus (status, value) VALUES ('COMPLETED', 1);
+INSERT INTO transactionStatus (status, value) VALUES ('IN PROGRESS', 2);
+INSERT INTO transactionStatus (status, value) VALUES ('FAILED', 3);
+
+SELECT * FROM transactionStatus;

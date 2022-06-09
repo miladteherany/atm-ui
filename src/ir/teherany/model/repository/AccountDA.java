@@ -21,7 +21,7 @@ public class AccountDA implements AutoCloseable {
         AccountType accountType = new AccountType();
 
         long dbId = 0;
-        String SQL = "INSERT INTO ACCOUNT (accountNo, password, balance, personId, accountType) Value (?,?,?,?,?)";
+        String SQL = "INSERT INTO ACCOUNT (accountNo, password, balance, personId, accountType) Values (?,?,?,?,?)";
         try {
             preparedStatement = connection.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, account.getAccountNo());
