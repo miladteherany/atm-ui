@@ -28,7 +28,7 @@ public class PersonController implements Initializable {
         try {
             Person person = null;
             if (name.length() != 0 && family.length() != 0 && age != 0 && nationalCode.length() != 0) {
-                person = new Person(name, family, age, nationalCode);
+                person = new Person().setFirstName(name).setLastName(family).setAge(age).setNationalCode(nationalCode);
             }
             PersonServiceImpl.getInstance().save(person);
         } catch (Exception exception) {
