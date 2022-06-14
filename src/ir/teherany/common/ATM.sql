@@ -87,7 +87,3 @@ SELECT * FROM transactionType;
 INSERT INTO transactionStatus (status, value) VALUES ('COMPLETED', 1);
 INSERT INTO transactionStatus (status, value) VALUES ('IN PROGRESS', 2);
 INSERT INTO transactionStatus (status, value) VALUES ('FAILED', 3);
-
-SELECT * FROM transactionStatus;
-
-ALTER TABLE ACCOUNT ADD COLUMN transactionId INTEGER NOT NULL REFERENCES transaction(id);
