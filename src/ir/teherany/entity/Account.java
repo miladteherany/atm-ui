@@ -1,6 +1,7 @@
 package ir.teherany.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Account implements Serializable {
     private Long id;
@@ -9,6 +10,8 @@ public class Account implements Serializable {
     private Double balance;
     private Person person;
     private AccountType accountType;
+    private List<Transaction> transactions;
+
 
     public Long getId() {
         return id;
@@ -61,6 +64,15 @@ public class Account implements Serializable {
 
     public Account setAccountType(AccountType accountType) {
         this.accountType = accountType;
+        return this;
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public Account setTransactions(List<Transaction> transactions) {
+        this.transactions = transactions;
         return this;
     }
 }

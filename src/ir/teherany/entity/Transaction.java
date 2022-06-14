@@ -3,7 +3,7 @@ package ir.teherany.entity;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class Transaction implements Serializable {
+public sealed class Transaction implements Serializable permits Deposit, Withdraw {
     private Long id;
     private Double amount;
     private Timestamp createdDate;
